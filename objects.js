@@ -14,7 +14,14 @@
   For example: 'Hello! My name is Rubber Duck and I live in Utah"
 */
 
-//CODE HERE
+const me = {
+  firstName: 'Misha',
+  state: 'Utah',
+  age: '28',
+  greeter() {console.log(`Hello! My name is ${me.firstName} and I live in ${me.state}`)}
+} 
+
+console.log(me.greeter())
 
 
 
@@ -44,4 +51,33 @@
   }
 */
 
-//CODE HERE
+function carFactory(make, model, year) {
+  console.log(make, model, year)
+  if(year > 2018) {
+    carFactory.isNew = true
+    console.log(carFactory.isNew)
+} else {
+  carFactory.isNew = false
+  console.log(carFactory.isNew)
+}
+}
+let car1 = new carFactory('Hyundai','Tucson', 2022)
+carFactory('hyundai','Tucson', 2017)
+console.log(car1)
+
+
+// class carFactory {
+//   constructor(make, model, year) {
+//     this.make = make;
+//     this.model = model;
+//     this.year = year; 
+//     this.isNew = true;
+//     } 
+//   }
+//   new() {
+//     if(year > 2018 === true) {
+//     console.log('true')}
+// }
+
+
+// let car1 = new carFactory('Hyundai','Tucson', 2022)
